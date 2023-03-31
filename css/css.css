@@ -1,9 +1,10 @@
 * {
     margin: 0;
-        padding: 0;
-        border: 0;
-        box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
 }
+
 .wrapper {
     padding-right: 15px;
     padding-left: 15px;
@@ -11,42 +12,118 @@
     max-width: 1440px;
     display: flex;
 }
+
+/*сетка для уроков*/
 .wrapper_lessons {
     padding-right: 15px;
     padding-left: 15px;
     margin: 0 auto;
     max-width: 1440px;
-    display: flex;
-        justify-content: center;
-        margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-top: 30px;
 }
-header{
-background-color:#AC43C7 ;
-width: 100%;
-height: 65px;
+
+header {
+    background-color: #AC43C7;
+    width: 100%;
+    height: 65px;
 }
-.house{
-   
+
+.menu {
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+/*иконка домика*/
+.house {
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
-top: 13px;
-left: 650px;
-position: absolute;
+    top: 13px;
+    left: 650px;
+    position: absolute;
 }
-.subject{
- 
-        width: 50px;
-        height: 50px;
-        background-repeat: no-repeat;
-        top:7px; 
+
+/*иконка с буквой т*/
+.subject {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    top: 7px;
     right: 650px;
-        position: absolute;
-}
-.menu{
-
-        justify-content: center;
-        margin-bottom: 20px;
-      
+    position: absolute;
 }
 
+/*css для обычных уроков*/
+
+/*розовый блок (1 урок)*/
+.block_prob {
+    background-color: #E8DDE9;
+    width: 613px;
+    height: 82px;
+    border-radius: 20px;
+    margin-top: 30px;
+border: 1px solid rgba(172, 67, 199, 0.37);
+}
+
+/*черная надпись  в розовом блоке*/
+.inscription {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+padding-left: 100px;
+margin-top: -35px;
+
+
+
+}
+/*линия сбоку от номера*/
+.inscription::before{
+        content: " ";
+            background: rgba(187, 174, 174, 1);
+            width: 1px;
+            height: 82px;
+            position: absolute;
+            margin-left: -27px;
+            margin-top: -32px;
+}
+/*номер урока*/
+.number {
+    color: #710E67;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 14px;
+}
+/*кружок*/
+.border {
+    box-sizing: border-box;
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    border-radius: 100%;
+    border: 1px solid #710E67;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+/*css для тематических уроков*/
+
+/*розовый блок (1 урок)*/
+.block_team {
+    background-color: #E8DDE9;
+    width: 613px;
+    height: 82px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+}
